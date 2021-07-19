@@ -3,7 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
-//Prova
+
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -14,9 +14,17 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//Afegit
+	implementation 'org.springframework:spring-tx'
+	implementation 'org.springframework:spring-webmvc'
+	implementation 'org.springframework.data:spring-data-jpa'
+	//
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+springBoot {
+    mainClassName = 'springBootInitialDemo.App'
+}
 test {
 	useJUnitPlatform()
 }
